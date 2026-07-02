@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap"
+      rel="stylesheet">
+    <title>Frontend Mentor | Contact form</title>
+
+  </head>
+  <body>
+
+    <div class="success">
+      <div class="success_head">
+        <img src="/assets/images/icon-success-check.svg" alt="">
+        <p>Message Sent!</p>
+      </div>
+      <div class="success_text">
+        <span></span>
+      </div>
+    </div>
+
+
+
+    <main class="container">
+      <div class="card">
+        <h2 class="card_head">Contact Us</h2>
+
+        <form action id="form">
+          <div class="card_main">
+            <div class="card_name">
+              <div class="card_form">
+                <label for="firstName">First name <span
+                    class="star">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+                <span class="error" id="firstError">This field is
+                  required</span>
+              </div>
+
+              <div class="card_form">
+                <label for="lastName"> Last name <span class="star">*</span>
+                </label>
+                <input type="text" id="lastName" name="lastName" required>
+                <span class="error" id="lastError">This field is
+                  required</span></div>
+            </div>
+
+            <div class="card_form">
+              <label for="email">Email Address <span
+                  class="star">*</span></label>
+              <input type="email" id="email" name="email" required>
+              <span class="error" id="emailError">Please enter a valid email
+                address</span>
+            </div>
+
+            <div class="card_form">
+              <span class="query_title">Query Type <span
+                  class="star">*</span></span>
+
+              <div class="card_radio">
+
+                <div class="general">
+                  <input type="radio" id="general" name="queryType"
+                    value="general" required>
+                  <label for="general">General Enquiry</label>
+                </div>
+
+                <div class="support">
+                  <input type="radio" id="support" name="queryType"
+                    value="support">
+                  <label for="support">Support Request</label>
+                </div>
+
+              </div>
+
+              <span class="error" id="radioError">Please select a query
+                type</span>
+            </div>
+
+            <div class="card_form">
+              <label for="message">Message <span class="star">*</span> </label>
+              <textarea name="message" id="message" required></textarea>
+              <span class="error" id="messageError">This field is
+                required</span>
+            </div>
+
+            <div class="card_end">
+              <div class="card_check">
+                <input type="checkbox" id="confirm" name="confirm"
+                  value="confirm"
+                  required>
+                <label for="confirm">I consent to being contacted by the
+                  team <span class="star">*</span></label>
+              </div>
+              <span class="error" id="confirmError">To submit this form, please
+                consent to being contacted
+              </span>
+            </div>
+
+            <button id="card_button" type="submit">Submit</button>
+
+          </div>
+
+        </form>
+      </div>
+    </main>
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
