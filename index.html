@@ -14,20 +14,27 @@
       rel="stylesheet">
     <title>Frontend Mentor | Contact form</title>
 
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init ("ixJD719czlchbhO9U");
+   })();
+</script>
+
   </head>
   <body>
 
     <div class="success">
       <div class="success_head">
-        <img src="/assets/images/icon-success-check.svg" alt="">
+        <img src="/assets/images/icon-success-check.svg" alt>
         <p>Message Sent!</p>
       </div>
       <div class="success_text">
-        <span></span>
+        <span>Thanks for completing the form.We'll be a in touch soon!</span>
       </div>
     </div>
-
-
 
     <main class="container">
       <div class="card">
@@ -69,12 +76,16 @@
                 <div class="general">
                   <input type="radio" id="general" name="queryType"
                     value="general" required>
+                  <img class="radio_icon"
+                    src="/assets/images/icon-radio-selected.svg" alt>
                   <label for="general">General Enquiry</label>
                 </div>
 
                 <div class="support">
                   <input type="radio" id="support" name="queryType"
                     value="support">
+                  <img class="radio_icon"
+                    src="/assets/images/icon-radio-selected.svg" alt>
                   <label for="support">Support Request</label>
                 </div>
 
@@ -86,7 +97,8 @@
 
             <div class="card_form">
               <label for="message">Message <span class="star">*</span> </label>
-              <textarea name="message" id="message" required></textarea>
+              <textarea name="message" class="required_input" id="message"
+                required></textarea>
               <span class="error" id="messageError">This field is
                 required</span>
             </div>
@@ -96,6 +108,8 @@
                 <input type="checkbox" id="confirm" name="confirm"
                   value="confirm"
                   required>
+                <img class="check_icon"
+                  src="/assets/images/icon-checkbox-check.svg" alt>
                 <label for="confirm">I consent to being contacted by the
                   team <span class="star">*</span></label>
               </div>
@@ -111,8 +125,6 @@
         </form>
       </div>
     </main>
-
-
 
     <script src="app.js"></script>
   </body>

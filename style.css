@@ -20,6 +20,12 @@
     font-size: 0.7rem;
 }
 
+.error_input{
+    border-color: var(--Red) !important;
+}
+.show{
+    display: block;
+}
 body {
     background-color: var(--Green-200);
 }
@@ -85,6 +91,11 @@ body {
     height: 2rem;
     border-radius: 0.3rem;
     border: 0.1rem solid var(--Grey-500);
+    /* padding: 0.5rem; */
+
+}
+.card_form input:hover{
+    border-color: var(--Green-600);
     cursor: pointer;
 
 }
@@ -93,6 +104,7 @@ body {
     width: 12rem;
     max-width: 100%;
     height: 2rem;
+
 }
 
 .card_radio {
@@ -120,21 +132,43 @@ body {
     padding-left: 1rem;
     cursor: pointer;
     height: 2rem;
+    position: relative;
+}
+.general:hover,
+.support:hover {
+    border-color: var(--Green-600);
 
 }
 
 .general input,
 .support input {
     width: 0.8rem;
-}
 
+}
+.radio_icon{
+    width: 0.8rem;
+    position: absolute;
+    left: 1rem;
+    height: 1rem;
+    display: none;
+}
+.check_icon{
+    width: 0.8rem;
+    position: absolute;
+    left: 1.5rem;
+    display: none;
+    height: 0.9rem;
+}
 textarea {
     width: 100%;
     height: 5rem;
     border: 0.1rem solid var(--Grey-500);
     border-radius: 0.2rem;
 }
+textarea:hover{
+    border-color: var(--Green-600);
 
+}
 .card_end {
     display: flex;
     flex-direction: column;
@@ -173,11 +207,11 @@ textarea {
     flex-direction: column;
     padding: 1rem;
     color: var(--White);
-    gap: 0.5rem;
+    gap: 0.9rem;
     position: absolute;
-    left: 20.5rem;
+    left: 35.5%;
     z-index: 1;
-    margin-top: 1rem;
+    margin-top: 0.1rem;
     display: none;
 }
     
@@ -188,7 +222,7 @@ textarea {
 }
 
 .success_text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: var(--White);
 }
