@@ -91,7 +91,7 @@ body {
     height: 2rem;
     border-radius: 0.3rem;
     border: 0.1rem solid var(--Grey-500);
-    /* padding: 0.5rem; */
+    padding: 0.2rem;
 
 }
 .card_form input:hover{
@@ -255,6 +255,11 @@ textarea:hover{
     textarea {
         height: 10rem;
     }
-
-
+.card_check{
+    position: relative;
+}
+.check_icon{
+    left: 0rem;
+    top: 0.4rem;
+}
 }

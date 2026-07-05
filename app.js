@@ -1,3 +1,8 @@
+
+emailjs.init({
+    publicKey: "ixJD719czlchbhO9U",
+});
+
 const success = document.querySelector(".success");
 const error = document.querySelectorAll(".error");
 
@@ -51,10 +56,10 @@ general.addEventListener("input", function () {
         error[3].style.display = "none";
         radio[0].style.display = "block";
         radio[1].style.display = "none";
+
     } else {
 
         error[3].style.display = "block";
-
     }
 })
 
@@ -65,7 +70,6 @@ support.addEventListener("input", function () {
         radio[0].style.display = "none";
     } else {
         error[3].style.display = "block";
-
     }
 })
 
@@ -101,12 +105,36 @@ form.addEventListener("submit", function (e) {
         error[5].style.display === "none"
     ) {
         success.style.display = "block";
-    } setTimeout(function set() {
+        emailjs.sendForm("service_hgt251b", "template_ff9rakl", form)
+            .then(() => {
+                console.log(form);
+                form.reset();
+
+            })
+            .catch((error) => {
+                console.log("Email göndərilmədi:", error);
+
+            });
+    }
+
+    setTimeout(function set() {
         success.style.display = "none";
     }, 5000);
 
 });
 
-// const service = service_hgt251b;
-// const template = template_ff9rakl;
+
+
+
+// function sendMail () {
+// let params = {
+//     name: firstName.value,
+//     lastName : lastName.value,
+//     email : email.value,
+//     message: message.value,
+
+// };
+// }
+const service = service_hgt251b;
+const template = template_ff9rakl;
 
